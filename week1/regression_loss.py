@@ -1,5 +1,6 @@
 import math
 import random
+
 def exercise3():
     def MAE(x):
         final_MAE = 0
@@ -10,6 +11,7 @@ def exercise3():
             final_MAE += loss
             print(f'loss name : MAE , sample : {i} , pred : {pred} , target : {target} , loss : {loss}')
         print(f'final_MAE = {final_MAE}')
+
     def MSE(x):
         final_MSE = 0
         for i in range(x+1):
@@ -19,6 +21,7 @@ def exercise3():
             final_MAE += loss
             print(f'loss name : MSE , sample : {i} , pred : {pred} , target : {target} , loss : {loss}')
         print(f'final_MSE = {final_MSE}')
+        
     def RMSE(x):
         final_RMSE = 0
         for i in range(x+1):
@@ -29,6 +32,7 @@ def exercise3():
             final_RMSE += loss
             print(f'loss name : RMSE , sample : {i} , pred : {pred} , target : {target} , loss : {loss}')
         print(f'final_RMSE = {final_RMSE}')
+
     num_samples = input('Input number of samples ( integer number ) which are generated :')
     if num_samples.isnumeric() == False:
         return 'number of samples must be an integer number'
@@ -43,4 +47,5 @@ def exercise3():
             RMSE(num_samples)
         else:
             print(f'{loss_func} is not supported')
+            
 exercise3()
